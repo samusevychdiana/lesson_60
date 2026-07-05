@@ -3,9 +3,185 @@ body {
     background-color: #dcd9d9;
 }
 
+header {
+    position: sticky;
+
+}
+
+.div-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    position: relative;
+    background-color: #000000;
+    gap: 10px;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    background-color: #000000;
+    background: none;
+    padding: 0;
+    position: relative;
+    font-size: 14px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.header-img {
+    background: url("images/sea.webp") center/cover no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+p,
+h1 {
+    color: white;
+}
+
+.sales {
+    width: 300px;
+    background-color: #000000;
+    opacity: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+    max-width: 90%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.sales h1 {
+    font-size: 20px;
+}
+
+.sales p {
+    margin: 0;
+    font-size: 15px;
+}
+
+@media (max-width: 760px) {
+
+    .header-img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+        height: 250px;
+    }
+
+    .sales {
+        width: 250px;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .burger,
+    .burger::before,
+    .burger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        position: absolute;
+
+    }
+
+    .burger {
+        top: 50%;
+    }
+
+    .burger::before {
+        top: -8px;
+    }
+
+    .burger::after {
+        top: 8px;
+    }
+
+    .menu-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        background: black;
+        z-index: 100;
+    }
+
+    .menu-nav li {
+        width: 100%;
+    }
+
+    .menu-nav a {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+
+    #menu-toggle:checked~.menu-nav {
+        display: flex;
+    }
+
+    #menu-toggle:checked~.menu-btn .burger {
+        transform: rotate(45deg);
+    }
+
+    #menu-toggle:checked~.menu-btn .burger::before {
+        top: 0;
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.menu-btn .burger::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+}
+
 .container {
     max-width: 1000px;
     margin: auto;
+    margin-top: 100px;
 }
 
 .products {
@@ -58,6 +234,40 @@ body {
 .new {
     right: 10px;
     background: rgb(182, 113, 9);
+}
+
+.span {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 130px;
+}
+
+.container1 {
+    display: flex;
+    gap: 40px;
+    margin: 100px 30px;
+}
+
+.card1 {
+    position: relative;
+    width: 220px;
+    padding: 20px 20px 20px;
+    background-color: white;
+}
+
+.card1 p {
+    color: black;
 }
 
 .footer-bottom {
